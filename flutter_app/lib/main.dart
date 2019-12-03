@@ -1,4 +1,6 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/CounterPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.green,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(),
     );
   }
 }
@@ -72,8 +74,25 @@ class _MyHomePageState extends State<MyHomePage> {
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
+        leading: IconButton(icon: Icon(Icons.menu), onPressed: null),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: null,
+          ),
+          IconButton(
+            icon: Icon(Icons.access_time),
+            onPressed: null,
+          )
+        ],
       ),
-      body: Center(
+      body: Container(
+        padding: EdgeInsets.symmetric(horizontal: 18),
+        decoration: BoxDecoration(
+            color: Colors.white,
+            shape: BoxShape.rectangle,
+            borderRadius: BorderRadius.all(Radius.circular(10))
+        ),
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         child: Column(
@@ -98,20 +117,41 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.display1,
+              style: Theme
+                  .of(context)
+                  .textTheme
+                  .display1,
             ),
-            Text('Hello, how are you?', textAlign: TextAlign.center,
-                overflow: TextOverflow.ellipsis, style: TextStyle(fontWeight: FontWeight.normal)),
+            Text('Hello, how are you?',
+                textAlign: TextAlign.center,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(fontWeight: FontWeight.normal)),
             Text.rich(TextSpan(text: "Rich text start", children: <TextSpan>[
-              TextSpan(text: " this is for you", style: TextStyle(fontStyle: FontStyle.italic, fontSize: 15, color: Colors.green)),
-              TextSpan(text: " Do you know", style: TextStyle(fontStyle: FontStyle.italic, fontSize: 18, color: Colors.black87)),
+              TextSpan(
+                  text: " this is for you",
+                  style: TextStyle(
+                      fontStyle: FontStyle.italic,
+                      fontSize: 15,
+                      color: Colors.green)),
+              TextSpan(
+                  text: " Do you know",
+                  style: TextStyle(
+                      fontStyle: FontStyle.italic,
+                      fontSize: 18,
+                      color: Colors.black87)),
             ])),
             Row(
               children: <Widget>[
                 const FlutterLogo(),
-                const Expanded(child: Text('Flutter\'s hot reload helps you quickly and easily experiment.', textAlign: TextAlign.center)),
+                const Expanded(
+                    child: Text(
+                        'Flutter\'s hot reload helps you quickly and easily experiment.',
+                        textAlign: TextAlign.center)),
                 const Icon(Icons.sentiment_satisfied)
               ],
+            ),
+            ListView(
+              children: <Widget>[],
             )
           ],
         ),
