@@ -2,6 +2,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/CounterPage.dart';
 
+import 'ShoppingList.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -24,7 +26,13 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.green,
       ),
-      home: MyHomePage(),
+      home: ShoppingListPage(
+          products: <Product>[
+            Product('Apple'),
+            Product('Orange'),
+            Product('Peach')
+          ]
+      ),
     );
   }
 }
