@@ -12,6 +12,31 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    var stars = Row(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        Icon(
+          Icons.add,
+          color: Colors.green[500],
+        ),
+        Icon(
+          Icons.add,
+          color: Colors.green[500],
+        ),
+        Icon(
+          Icons.add,
+          color: Colors.green[500],
+        ),
+        Icon(
+          Icons.add,
+          color: Colors.black,
+        ),
+        Icon(
+          Icons.add,
+          color: Colors.black,
+        ),
+      ],
+    );
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -24,17 +49,97 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.blue,
       ),
-      home: ShoppingListPage(
-          products: <Product>[
-            Product('Apple'),
-            Product('Orange'),
-            Product('Peach')
-          ]
-      ),
+//      home: ShoppingListPage(
+//          products: <Product>[
+//            Product('Apple'),
+//            Product('Orange'),
+//            Product('Peach')
+//          ]
+//      ),
+//    home: MyHomePage(),
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text('Flutter layout demo'),
+          ),
+          body: buildListView()),
     );
   }
+}
+
+Widget buildCard() => SizedBox(
+      height: 200,
+      child: Card(
+        child: Column(
+          children: <Widget>[
+            ListTile(
+              title: Text(
+                '163 club',
+                style: TextStyle(fontWeight: FontWeight.w500),
+              ),
+              subtitle: Text('My City, Ganzhou'),
+              leading: Icon(
+                Icons.restaurant_menu,
+                color: Colors.blue[500],
+              ),
+            ),
+            Divider(),
+            ListTile(
+              title: Text('wangbin@qq.com'),
+              subtitle: Text('People road'),
+              leading: Icon(
+                Icons.contact_mail,
+                color: Colors.blue[500],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+
+Widget buildListView() => ListView(
+      children: <Widget>[
+        _tile('Cinkdkdk kdkd kdkd ', 'I 9 kd ol', Icons.theaters),
+        _tile('Cinkdkdk 3i4b kdkd ', 'I 9 kd d', Icons.theaters),
+        _tile('Cinkdkdk ufu4y rpto ', 'I 9 kdjdol', Icons.theaters),
+        Divider(),
+        Container(
+          decoration: BoxDecoration(),
+          margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'This is a text',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+              ),
+            ],
+          ),
+        ),
+        Divider(),
+        _tile('Cinkdkdk ufu4y rpto ', 'I 9 kdjdol', Icons.restaurant),
+        _tile('Cinkdkdk kd rpto ', 'I 9 yu', Icons.restaurant),
+        _tile('Cinkdkdk 11 rpto ', 'I 9 dd', Icons.restaurant),
+        _tile('Cinkdkdk ssd rpto ', 'I 9 d', Icons.restaurant),
+      ],
+    );
+
+ListTile _tile(String title, String subTitle, IconData iconData) {
+  return ListTile(
+    title: Text(
+      title,
+      style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
+    ),
+    subtitle: Text(subTitle),
+    leading: Icon(
+      iconData,
+      color: Colors.blue[500],
+    ),
+  );
 }
 
 class MyHomePage extends StatefulWidget {
@@ -99,8 +204,7 @@ class _MyHomePageState extends State<MyHomePage> {
         decoration: BoxDecoration(
             color: Colors.white,
             shape: BoxShape.rectangle,
-            borderRadius: BorderRadius.all(Radius.circular(10))
-        ),
+            borderRadius: BorderRadius.all(Radius.circular(10))),
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         child: Column(
@@ -125,10 +229,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
-              style: Theme
-                  .of(context)
-                  .textTheme
-                  .display1,
+              style: Theme.of(context).textTheme.display1,
             ),
             Text('Hello, how are you?',
                 textAlign: TextAlign.center,
@@ -149,6 +250,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       color: Colors.black87)),
             ])),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 const FlutterLogo(),
                 const Expanded(
