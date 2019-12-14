@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/CounterPage.dart';
 
 import 'ShoppingList.dart';
+import 'layout.dart';
 
 void main() {
   runApp(MyApp());
@@ -63,7 +64,14 @@ class MyApp extends StatelessWidget {
           appBar: AppBar(
             title: Text('Flutter layout demo'),
           ),
-          body: buildListView()),
+          body: ListView(
+            children: <Widget>[
+              imageLayout,
+              titleLayout,
+              buttons,
+              textSlection
+            ],
+          )),
     );
   }
 }
