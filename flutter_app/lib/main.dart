@@ -69,7 +69,9 @@ class MyApp extends StatelessWidget {
               imageLayout,
               titleLayout,
               buttons,
-              textSlection
+              textSlection,
+              textFieldArea,
+              floatActionButton
             ],
           )),
     );
