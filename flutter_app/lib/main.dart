@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/CounterPage.dart';
+import 'package:flutter_app/route.dart';
 
 import 'ShoppingList.dart';
 import 'layout.dart';
@@ -60,20 +61,21 @@ class MyApp extends StatelessWidget {
 //          ]
 //      ),
 //    home: MyHomePage(),
-      home: Scaffold(
-          appBar: AppBar(
-            title: Text('Flutter layout demo'),
-          ),
-          body: ListView(
-            children: <Widget>[
-              imageLayout,
-              titleLayout,
-              buttons,
-              textSlection,
-              textFieldArea,
-              floatActionButton
-            ],
-          )),
+//      home: Scaffold(
+//          appBar: AppBar(
+//            title: Text('Flutter layout demo'),
+//          ),
+//          body: ListView(
+//            children: <Widget>[
+//              imageLayout,
+//              titleLayout,
+//              buttons,
+//              textSlection,
+//              textFieldArea,
+//              floatActionButton
+//            ],
+//          )),
+    home: FirstRoute(),
     );
   }
 }
