@@ -12,8 +12,9 @@ class FirstRoute extends StatelessWidget {
             child: Text('Open route'),
             onPressed: () {
               // Navigate
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => SecondRoute()));
+//              Navigator.push(context,
+//                  MaterialPageRoute(builder: (context) => SecondRoute()));
+            Navigator.pushNamed(context, '/second');
             }),
       ),
     );
