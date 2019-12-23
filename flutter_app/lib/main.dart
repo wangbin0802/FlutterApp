@@ -7,6 +7,8 @@ import 'package:flutter_app/todo/TodosScreen.dart';
 import 'package:flutter_app/todo/effect.dart';
 
 import 'ShoppingList.dart';
+import 'anim/fade.dart';
+import 'anim/shapeshift.dart';
 import 'layout.dart';
 
 void main() {
@@ -16,7 +18,12 @@ void main() {
 //    home: TodosScreen(todos: List.generate(20, (i) => Todo(
 //        'Todo $i',
 //        'A description of what needs to be done for Todo $i'))),
-    home: MainScreen(),
+//    home: MainScreen(),
+    home: Scaffold(
+      body: Center(
+        child: AnimatedContainerDemo(),
+      ),
+    ),
   ));
 }
 
