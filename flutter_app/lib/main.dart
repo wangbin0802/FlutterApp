@@ -4,6 +4,7 @@ import 'package:flutter_app/CounterPage.dart';
 import 'package:flutter_app/route.dart';
 import 'package:flutter_app/todo/Todo.dart';
 import 'package:flutter_app/todo/TodosScreen.dart';
+import 'package:flutter_app/todo/effect.dart';
 
 import 'ShoppingList.dart';
 import 'layout.dart';
@@ -12,9 +13,10 @@ void main() {
 //  runApp(MyApp());
   runApp(MaterialApp(
     title: 'Passing Data',
-    home: TodosScreen(todos: List.generate(20, (i) => Todo(
-        'Todo $i',
-        'A description of what needs to be done for Todo $i'))),
+//    home: TodosScreen(todos: List.generate(20, (i) => Todo(
+//        'Todo $i',
+//        'A description of what needs to be done for Todo $i'))),
+    home: MainScreen(),
   ));
 }
 
@@ -93,8 +95,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-Widget buildCard() =>
-    SizedBox(
+Widget buildCard() => SizedBox(
       height: 200,
       child: Card(
         child: Column(
@@ -124,8 +125,7 @@ Widget buildCard() =>
       ),
     );
 
-Widget buildListView() =>
-    ListView(
+Widget buildListView() => ListView(
       children: <Widget>[
         _tile('Cinkdkdk kdkd kdkd ', 'I 9 kd ol', Icons.theaters),
         _tile('Cinkdkdk 3i4b kdkd ', 'I 9 kd d', Icons.theaters),
@@ -256,10 +256,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
-              style: Theme
-                  .of(context)
-                  .textTheme
-                  .display1,
+              style: Theme.of(context).textTheme.display1,
             ),
             Text('Hello, how are you?',
                 textAlign: TextAlign.center,
