@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/CounterPage.dart';
 import 'package:flutter_app/anim/logo.dart';
+import 'package:flutter_app/anim/stagger.dart';
 import 'package:flutter_app/route.dart';
 import 'package:flutter_app/todo/Todo.dart';
 import 'package:flutter_app/todo/TodosScreen.dart';
@@ -22,7 +23,7 @@ void main() {
 //    home: MainScreen(),
     home: Scaffold(
       body: Center(
-        child: LogoAppState(),
+        child: StaggerDemo(),
       ),
     ),
   ));
