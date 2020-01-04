@@ -9,6 +9,7 @@ import 'package:flutter_app/todo/TodosScreen.dart';
 import 'package:flutter_app/todo/effect.dart';
 import 'package:flutter_app/widget/spinner.dart';
 import 'package:flutter_app/widget/stack.dart';
+import 'package:flutter_app/widget/wrap.dart';
 
 import 'ShoppingList.dart';
 import 'anim/fade.dart';
@@ -26,7 +27,7 @@ void main() {
     home: Scaffold(
       backgroundColor: Colors.black,
       body: Center(
-        child: StackDemo(),
+        child: WrapDemo(),
       ),
     ),
   ));
