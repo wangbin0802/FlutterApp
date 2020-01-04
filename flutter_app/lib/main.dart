@@ -7,6 +7,7 @@ import 'package:flutter_app/route.dart';
 import 'package:flutter_app/todo/Todo.dart';
 import 'package:flutter_app/todo/TodosScreen.dart';
 import 'package:flutter_app/todo/effect.dart';
+import 'package:flutter_app/widget/dialog.dart';
 import 'package:flutter_app/widget/spinner.dart';
 import 'package:flutter_app/widget/stack.dart';
 import 'package:flutter_app/widget/wrap.dart';
@@ -25,9 +26,8 @@ void main() {
 //        'A description of what needs to be done for Todo $i'))),
 //    home: MainScreen(),
     home: Scaffold(
-      backgroundColor: Colors.black,
       body: Center(
-        child: WrapDemo(),
+        child: DialogDemo(),
       ),
     ),
   ));
