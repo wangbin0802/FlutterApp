@@ -8,6 +8,7 @@ import 'package:flutter_app/todo/Todo.dart';
 import 'package:flutter_app/todo/TodosScreen.dart';
 import 'package:flutter_app/todo/effect.dart';
 import 'package:flutter_app/widget/assets.dart';
+import 'package:flutter_app/widget/openbrowser.dart';
 import 'package:flutter_app/widget/spinner.dart';
 import 'package:flutter_app/widget/stack.dart';
 
@@ -34,7 +35,7 @@ void main() {
     home: Scaffold(
       backgroundColor: Colors.black,
       body: Center(
-        child: TestAssets(),
+        child: DemoPage(),
       ),
     ),
   ));
