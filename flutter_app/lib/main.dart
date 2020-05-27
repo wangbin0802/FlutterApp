@@ -16,6 +16,7 @@ import 'ShoppingList.dart';
 import 'anim/fade.dart';
 import 'anim/shapeshift.dart';
 import 'layout.dart';
+import 'part/partdisplay.dart';
 
 void main() {
 //  runApp(MyApp());
@@ -35,7 +36,7 @@ void main() {
     home: Scaffold(
       backgroundColor: Colors.black,
       body: Center(
-        child: DemoPage(),
+        child: PartDisplay(),
       ),
     ),
   ));
