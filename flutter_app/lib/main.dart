@@ -7,18 +7,26 @@ import 'package:flutter_app/route.dart';
 import 'package:flutter_app/todo/Todo.dart';
 import 'package:flutter_app/todo/TodosScreen.dart';
 import 'package:flutter_app/todo/effect.dart';
-import 'package:flutter_app/widget/dialog.dart';
+import 'package:flutter_app/widget/assets.dart';
+import 'package:flutter_app/widget/openbrowser.dart';
 import 'package:flutter_app/widget/spinner.dart';
 import 'package:flutter_app/widget/stack.dart';
-import 'package:flutter_app/widget/wrap.dart';
 
 import 'ShoppingList.dart';
 import 'anim/fade.dart';
 import 'anim/shapeshift.dart';
 import 'layout.dart';
+import 'part/partdisplay.dart';
 
 void main() {
 //  runApp(MyApp());
+
+//  runApp(MaterialApp(
+//    title: 'Passing Data',
+//    home: TodosScreen(todos: List.generate(20, (i) => Todo(
+//        'Todo $i',
+//        'A description of what needs to be done for Todo $i'))),
+//  ));
   runApp(MaterialApp(
     title: 'Passing Data',
 //    home: TodosScreen(todos: List.generate(20, (i) => Todo(
@@ -26,11 +34,13 @@ void main() {
 //        'A description of what needs to be done for Todo $i'))),
 //    home: MainScreen(),
     home: Scaffold(
+      backgroundColor: Colors.black,
       body: Center(
-        child: DialogDemo(),
+        child: PartDisplay(),
       ),
     ),
   ));
+
 }
 
 class MyApp extends StatelessWidget {
