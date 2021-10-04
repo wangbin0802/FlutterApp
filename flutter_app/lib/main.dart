@@ -17,8 +17,10 @@ import 'anim/fade.dart';
 import 'anim/shapeshift.dart';
 import 'layout.dart';
 import 'part/partdisplay.dart';
+import 'widget/chat_screen.dart';
 
 void main() {
+  const String _name = "Wang Bin";
 //  runApp(MyApp());
 
 //  runApp(MaterialApp(
@@ -36,11 +38,63 @@ void main() {
     home: Scaffold(
       backgroundColor: Colors.black,
       body: Center(
-        child: PartDisplay(),
+        child: ChatScreen(),
       ),
     ),
   ));
 
+}
+
+class SampleAppPage extends StatefulWidget {
+  SampleAppPage({Key key}) : super(key: key);
+
+  @override
+  _SampleAppPageState createState() => _SampleAppPageState();
+}
+
+class _SampleAppPageState extends State<SampleAppPage> {
+  List<Widget> widgets = [];
+
+  @override
+  void initState() {
+    super.initState();
+    for (int i = 0; i < 100; i++) {
+      widgets.add(getRow(i));
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Sample App'),
+      ),
+      body: RefreshIndicator(
+        onRefresh: _refresh,
+        child: ListView(children: widgets),
+      )
+    );
+  }
+
+  Future<void> _refresh() {
+
+  }
+
+  Widget getRow(int i) {
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          widgets = List.from(widgets);
+          widgets.add(getRow(widgets.length));
+          print('row $i');
+        });
+      },
+      child: Padding(
+        padding: EdgeInsets.all(10.0),
+        child: Text('Row $i'),
+      ),
+    );
+  }
 }
 
 class MyApp extends StatelessWidget {
@@ -279,7 +333,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.display1,
+//              style: Theme.of(context).textTheme.display1,
             ),
             Text('Hello, how are you?',
                 textAlign: TextAlign.center,
