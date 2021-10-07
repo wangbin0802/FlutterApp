@@ -8,9 +8,11 @@ import 'package:flutter_app/todo/Todo.dart';
 import 'package:flutter_app/todo/TodosScreen.dart';
 import 'package:flutter_app/todo/effect.dart';
 import 'package:flutter_app/widget/assets.dart';
+import 'package:flutter_app/widget/flutter_practice1.dart';
 import 'package:flutter_app/widget/general_widget.dart';
 import 'package:flutter_app/widget/manage_state.dart';
 import 'package:flutter_app/widget/openbrowser.dart';
+import 'package:flutter_app/widget/progress_route.dart';
 import 'package:flutter_app/widget/spinner.dart';
 import 'package:flutter_app/widget/stack.dart';
 
@@ -39,8 +41,8 @@ void main() {
 //        'A description of what needs to be done for Todo $i'))),
 //    home: MainScreen(),
     home: Scaffold(
-      backgroundColor: Colors.black,
-      body: ParentWidget()
+      backgroundColor: Colors.white,
+      body: ProgressRoute()
     ),
     routes: {
       "new_page": (context) => ChatScreen(),
