@@ -8,6 +8,8 @@ import 'package:flutter_app/todo/Todo.dart';
 import 'package:flutter_app/todo/TodosScreen.dart';
 import 'package:flutter_app/todo/effect.dart';
 import 'package:flutter_app/widget/assets.dart';
+import 'package:flutter_app/widget/general_widget.dart';
+import 'package:flutter_app/widget/manage_state.dart';
 import 'package:flutter_app/widget/openbrowser.dart';
 import 'package:flutter_app/widget/spinner.dart';
 import 'package:flutter_app/widget/stack.dart';
@@ -31,22 +33,26 @@ void main() {
 //  ));
   runApp(MaterialApp(
     title: 'Passing Data',
+    initialRoute: '/',
 //    home: TodosScreen(todos: List.generate(20, (i) => Todo(
 //        'Todo $i',
 //        'A description of what needs to be done for Todo $i'))),
 //    home: MainScreen(),
     home: Scaffold(
       backgroundColor: Colors.black,
-      body: Center(
-        child: ChatScreen(),
-      ),
+      body: ParentWidget()
     ),
+    routes: {
+      "new_page": (context) => ChatScreen(),
+    },
   ));
 
 }
 
+
 class SampleAppPage extends StatefulWidget {
-  SampleAppPage({Key key}) : super(key: key);
+  int initValue = 0;
+  SampleAppPage(this.initValue, {Key key}) : super(key: key);
 
   @override
   _SampleAppPageState createState() => _SampleAppPageState();
@@ -61,6 +67,36 @@ class _SampleAppPageState extends State<SampleAppPage> {
     for (int i = 0; i < 100; i++) {
       widgets.add(getRow(i));
     }
+  }
+
+  @override
+  void didUpdateWidget(covariant SampleAppPage oldWidget) {
+    // TODO: implement didUpdateWidget
+    super.didUpdateWidget(oldWidget);
+  }
+
+  @override
+  void deactivate() {
+    // TODO: implement deactivate
+    super.deactivate();
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+  }
+
+  @override
+  void reassemble() {
+    // TODO: implement reassemble
+    super.reassemble();
+  }
+
+  @override
+  void didChangeDependencies() {
+    // TODO: implement didChangeDependencies
+    super.didChangeDependencies();
   }
 
   @override

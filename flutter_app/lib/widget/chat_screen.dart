@@ -24,6 +24,12 @@ class _ChatScreenState extends State<ChatScreen> with TickerProviderStateMixin {
   }
 
   @override
+  void didUpdateWidget(covariant ChatScreen oldWidget) {
+    print("chat screen did update widget");
+    super.didUpdateWidget(oldWidget);
+  }
+
+  @override
   Widget build(BuildContext context) {
     print(Theme.of(context).platform);
     return Scaffold(
