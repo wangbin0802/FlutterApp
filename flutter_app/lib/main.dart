@@ -10,6 +10,7 @@ import 'package:flutter_app/todo/effect.dart';
 import 'package:flutter_app/widget/assets.dart';
 import 'package:flutter_app/widget/flutter_practice1.dart';
 import 'package:flutter_app/widget/general_widget.dart';
+import 'package:flutter_app/widget/layout_widget.dart';
 import 'package:flutter_app/widget/manage_state.dart';
 import 'package:flutter_app/widget/openbrowser.dart';
 import 'package:flutter_app/widget/progress_route.dart';
@@ -19,6 +20,7 @@ import 'package:flutter_app/widget/stack.dart';
 import 'ShoppingList.dart';
 import 'anim/fade.dart';
 import 'anim/shapeshift.dart';
+import 'functionWidget/will_pop_scope.dart';
 import 'layout.dart';
 import 'part/partdisplay.dart';
 import 'widget/chat_screen.dart';
@@ -42,7 +44,8 @@ void main() {
 //    home: MainScreen(),
     home: Scaffold(
       backgroundColor: Colors.white,
-      body: ProgressRoute()
+      appBar: AppBar(title: Text("Good"),),
+      body: InheritedWidgetTestRoute()
     ),
     routes: {
       "new_page": (context) => ChatScreen(),
