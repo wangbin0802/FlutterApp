@@ -19,6 +19,8 @@ import 'anim/fade.dart';
 import 'anim/shapeshift.dart';
 import 'layout.dart';
 import 'part/partdisplay.dart';
+import 'test/drag_demo.dart';
+import 'test/text_demo.dart';
 import 'widget/chat_screen.dart';
 
 void main() {
@@ -39,8 +41,8 @@ void main() {
 //        'A description of what needs to be done for Todo $i'))),
 //    home: MainScreen(),
     home: Scaffold(
-      backgroundColor: Colors.black,
-      body: ParentWidget()
+      backgroundColor: Colors.white,
+      body: DragDemo()
     ),
     routes: {
       "new_page": (context) => ChatScreen(),
