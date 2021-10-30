@@ -15,6 +15,7 @@ import 'package:flutter_app/widget/spinner.dart';
 import 'package:flutter_app/widget/stack.dart';
 
 import 'ShoppingList.dart';
+import 'anim/animate_decorate_box.dart';
 import 'anim/fade.dart';
 import 'anim/shapeshift.dart';
 import 'layout.dart';
@@ -42,7 +43,10 @@ void main() {
 //    home: MainScreen(),
     home: Scaffold(
       backgroundColor: Colors.white,
-      body: DragDemo()
+      appBar: AppBar(
+        title: Text("Animated Test"),
+      ),
+      body: AnimatedWidgetTest(),
     ),
     routes: {
       "new_page": (context) => ChatScreen(),
@@ -55,6 +59,10 @@ void main() {
 class SampleAppPage extends StatefulWidget {
   int initValue = 0;
   SampleAppPage(this.initValue, {Key key}) : super(key: key);
+
+  String get name {
+    return "wangbin";
+  }
 
   @override
   _SampleAppPageState createState() => _SampleAppPageState();
