@@ -20,6 +20,7 @@ import 'package:flutter_app/widget/stack.dart';
 import 'ShoppingList.dart';
 import 'anim/fade.dart';
 import 'anim/shapeshift.dart';
+import 'file/file_operation_route.dart';
 import 'functionWidget/will_pop_scope.dart';
 import 'layout.dart';
 import 'part/partdisplay.dart';
@@ -45,7 +46,7 @@ void main() {
     home: Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(title: Text("Good"),),
-      body: InheritedWidgetTestRoute()
+      body: FileOperationRoute()
     ),
     routes: {
       "new_page": (context) => ChatScreen(),
