@@ -18,6 +18,8 @@ import 'ShoppingList.dart';
 import 'anim/animate_decorate_box.dart';
 import 'anim/fade.dart';
 import 'anim/shapeshift.dart';
+import 'anim/turn_box.dart';
+import 'anim/turn_box_route.dart';
 import 'layout.dart';
 import 'part/partdisplay.dart';
 import 'test/drag_demo.dart';
@@ -46,7 +48,7 @@ void main() {
       appBar: AppBar(
         title: Text("Animated Test"),
       ),
-      body: AnimatedWidgetTest(),
+      body: TurnBoxRoute(),
     ),
     routes: {
       "new_page": (context) => ChatScreen(),
