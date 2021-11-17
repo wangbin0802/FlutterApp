@@ -8,22 +8,21 @@ import 'package:flutter_app/todo/Todo.dart';
 import 'package:flutter_app/todo/TodosScreen.dart';
 import 'package:flutter_app/todo/effect.dart';
 import 'package:flutter_app/widget/assets.dart';
+import 'package:flutter_app/widget/flutter_practice1.dart';
 import 'package:flutter_app/widget/general_widget.dart';
+import 'package:flutter_app/widget/layout_widget.dart';
 import 'package:flutter_app/widget/manage_state.dart';
 import 'package:flutter_app/widget/openbrowser.dart';
+import 'package:flutter_app/widget/progress_route.dart';
 import 'package:flutter_app/widget/spinner.dart';
 import 'package:flutter_app/widget/stack.dart';
 
 import 'ShoppingList.dart';
-import 'anim/animate_decorate_box.dart';
 import 'anim/fade.dart';
 import 'anim/shapeshift.dart';
-import 'anim/turn_box.dart';
-import 'anim/turn_box_route.dart';
+import 'functionWidget/will_pop_scope.dart';
 import 'layout.dart';
 import 'part/partdisplay.dart';
-import 'test/drag_demo.dart';
-import 'test/text_demo.dart';
 import 'widget/chat_screen.dart';
 
 void main() {
@@ -45,10 +44,8 @@ void main() {
 //    home: MainScreen(),
     home: Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        title: Text("Animated Test"),
-      ),
-      body: TurnBoxRoute(),
+      appBar: AppBar(title: Text("Good"),),
+      body: InheritedWidgetTestRoute()
     ),
     routes: {
       "new_page": (context) => ChatScreen(),
@@ -61,10 +58,6 @@ void main() {
 class SampleAppPage extends StatefulWidget {
   int initValue = 0;
   SampleAppPage(this.initValue, {Key key}) : super(key: key);
-
-  String get name {
-    return "wangbin";
-  }
 
   @override
   _SampleAppPageState createState() => _SampleAppPageState();
