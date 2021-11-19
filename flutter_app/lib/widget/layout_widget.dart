@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_app/state/observers.dart';
 
 class ShareDataWidget extends InheritedWidget {
   int data;
@@ -45,8 +46,28 @@ class InheritedWidgetTestRoute extends StatefulWidget {
       _InheritedWidgetTestRouteState();
 }
 
-class _InheritedWidgetTestRouteState extends State<InheritedWidgetTestRoute> {
+class _InheritedWidgetTestRouteState extends State<InheritedWidgetTestRoute> with WidgetsBindingObserver {
   int count = 0;
+
+  @override
+  void initState() {
+    WidgetsBinding.instance.addObserver(this);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    print("[wb] dispose.....");
+    WidgetsBinding.instance.removeObserver(this);
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    print("[wb] didChangeAppLifecycleState: $state");
+    appStateObserver.value = state;
+    super.didChangeAppLifecycleState(state);
+  }
 
   @override
   Widget build(BuildContext context) {
