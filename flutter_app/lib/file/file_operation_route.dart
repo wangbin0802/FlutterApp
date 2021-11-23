@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 
@@ -13,6 +14,7 @@ class FileOperationRoute extends StatefulWidget {
 
 class _FileOperationRouteState extends State<FileOperationRoute> {
   int _counter;
+  double _dCheck;
 
   @override
   void initState() {
@@ -48,10 +50,10 @@ class _FileOperationRouteState extends State<FileOperationRoute> {
 
   @override
   Widget build(BuildContext context) {
+    if (defaultTargetPlatform == TargetPlatform.android) {
+
+    }
     return Scaffold(
-      appBar: AppBar(
-        title: Text('文件操作'),
-      ),
       body: Center(
         child: Text('点击了$_counter次'),
       ),
