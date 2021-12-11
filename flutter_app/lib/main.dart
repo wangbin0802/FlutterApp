@@ -4,6 +4,9 @@ import 'package:flutter_app/CounterPage.dart';
 import 'package:flutter_app/anim/logo.dart';
 import 'package:flutter_app/anim/stagger.dart';
 import 'package:flutter_app/route.dart';
+import 'package:flutter_app/test/tesat_a_page.dart';
+import 'package:flutter_app/test/test_b_page.dart';
+import 'package:flutter_app/test/test_c_page.dart';
 import 'package:flutter_app/todo/Todo.dart';
 import 'package:flutter_app/todo/TodosScreen.dart';
 import 'package:flutter_app/todo/effect.dart';
@@ -38,26 +41,21 @@ void main() {
 //  ));
   runApp(MaterialApp(
     title: 'Passing Data',
-    initialRoute: '/',
-//    home: TodosScreen(todos: List.generate(20, (i) => Todo(
-//        'Todo $i',
-//        'A description of what needs to be done for Todo $i'))),
-//    home: MainScreen(),
     home: Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(title: Text("Good"),),
-      body: FileOperationRoute()
+      body: TestAPage(),
     ),
     routes: {
-      "new_page": (context) => ChatScreen(),
+      "/Apage": (context) => TestAPage(),
+      "/Bpage": (context) => TestBPage(),
+      "/Cpage": (context) => TestCPage(),
     },
   ));
-
 }
-
 
 class SampleAppPage extends StatefulWidget {
   int initValue = 0;
+
   SampleAppPage(this.initValue, {Key key}) : super(key: key);
 
   @override
@@ -108,19 +106,16 @@ class _SampleAppPageState extends State<SampleAppPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Sample App'),
-      ),
-      body: RefreshIndicator(
-        onRefresh: _refresh,
-        child: ListView(children: widgets),
-      )
-    );
+        appBar: AppBar(
+          title: Text('Sample App'),
+        ),
+        body: RefreshIndicator(
+          onRefresh: _refresh,
+          child: ListView(children: widgets),
+        ));
   }
 
-  Future<void> _refresh() {
-
-  }
+  Future<void> _refresh() {}
 
   Widget getRow(int i) {
     return GestureDetector(
@@ -384,24 +379,18 @@ class _MyHomePageState extends State<MyHomePage> {
             Text.rich(TextSpan(text: "Rich text start", children: <TextSpan>[
               TextSpan(
                   text: " this is for you",
-                  style: TextStyle(
-                      fontStyle: FontStyle.italic,
-                      fontSize: 15,
-                      color: Colors.green)),
+                  style: TextStyle(fontStyle: FontStyle.italic, fontSize: 15, color: Colors.green)),
               TextSpan(
                   text: " Do you know",
-                  style: TextStyle(
-                      fontStyle: FontStyle.italic,
-                      fontSize: 18,
-                      color: Colors.black87)),
+                  style:
+                      TextStyle(fontStyle: FontStyle.italic, fontSize: 18, color: Colors.black87)),
             ])),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 const FlutterLogo(),
                 const Expanded(
-                    child: Text(
-                        'Flutter\'s hot reload helps you quickly and easily experiment.',
+                    child: Text('Flutter\'s hot reload helps you quickly and easily experiment.',
                         textAlign: TextAlign.center)),
                 const Icon(Icons.sentiment_satisfied)
               ],
