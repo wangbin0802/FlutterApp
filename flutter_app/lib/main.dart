@@ -4,6 +4,7 @@ import 'package:flutter_app/CounterPage.dart';
 import 'package:flutter_app/anim/logo.dart';
 import 'package:flutter_app/anim/stagger.dart';
 import 'package:flutter_app/route.dart';
+import 'package:flutter_app/test/tab_bar_page.dart';
 import 'package:flutter_app/test/tesat_a_page.dart';
 import 'package:flutter_app/test/test_b_page.dart';
 import 'package:flutter_app/test/test_c_page.dart';
@@ -43,7 +44,7 @@ void main() {
     title: 'Passing Data',
     home: Scaffold(
       backgroundColor: Colors.white,
-      body: TestAPage(),
+      body: TabBarPage(),
     ),
     routes: {
       "/Apage": (context) => TestAPage(),

@@ -156,7 +156,7 @@ class TestAPage extends StatelessWidget {
                   ),
                   splashColor: Colors.red,
                 ),
-              )
+              ),
             ],
           ),
         ),
