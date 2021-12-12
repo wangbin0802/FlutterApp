@@ -42,10 +42,31 @@ void main() {
 //  ));
   runApp(MaterialApp(
     title: 'Passing Data',
+    theme: ThemeData(
+      primaryColor: Colors.red,
+    ),
     home: Scaffold(
+      drawer: Drawer(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FloatingActionButton(
+        child: Text("Book"),
+        onPressed: () {
+
+        },
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        onTap: (index) {
+
+        },
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.perm_identity), label: "Me")
+        ],
+      ),
       backgroundColor: Colors.white,
       body: TabBarPage(),
     ),
+    initialRoute: "/",
     routes: {
       "/Apage": (context) => TestAPage(),
       "/Bpage": (context) => TestBPage(),

@@ -20,6 +20,8 @@ class _TabBarPageState extends State<TabBarPage> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
+    Locale myLocale = Localizations.localeOf(context);
+    print(myLocale.languageCode);
     return NestedScrollView(
       headerSliverBuilder: (context, innerBoxlsScrolled) => [
         SliverAppBar(
@@ -142,9 +144,19 @@ class _TabBarPageState extends State<TabBarPage> with TickerProviderStateMixin {
             height: 150,
             width: 150,
             child: InteractiveViewer(
-                child: Image.asset("images/WechatIMG14.jpeg"),
+              child: Image.asset("images/WechatIMG14.jpeg"),
             ),
           ),
+          IconButton(onPressed: () => ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+                content: Text("Welcom to back."),
+                action: SnackBarAction(
+                  label: "确定",
+                  onPressed: () => print(""),
+                ),
+            )
+          ),
+              icon: Icon(Icons.eighteen_mp))
         ],
       );
     }
