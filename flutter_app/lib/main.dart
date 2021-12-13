@@ -22,8 +22,14 @@ import 'package:flutter_app/widget/spinner.dart';
 import 'package:flutter_app/widget/stack.dart';
 
 import 'ShoppingList.dart';
+import 'anim/animation_base_demo.dart';
+import 'anim/circle_progress_page.dart';
+import 'anim/curve_tween_demo.dart';
 import 'anim/fade.dart';
+import 'anim/hero_demo.dart';
 import 'anim/shapeshift.dart';
+import 'anim/tween_anim_demo.dart';
+import 'anim/tween_sequence_demo.dart';
 import 'file/file_operation_route.dart';
 import 'functionWidget/will_pop_scope.dart';
 import 'layout.dart';
@@ -64,7 +70,7 @@ void main() {
         ],
       ),
       backgroundColor: Colors.white,
-      body: TabBarPage(),
+      body: CircleProgressPage(),
     ),
     initialRoute: "/",
     routes: {
