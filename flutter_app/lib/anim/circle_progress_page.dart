@@ -10,7 +10,7 @@ class CircleProgressPage extends StatefulWidget {
   _CircleProgressPageState createState() => _CircleProgressPageState();
 }
 
-class _CircleProgressPageState extends State<CircleProgressPage> {
+class _CircleProgressPageState extends State<CircleProgressPage> with RouteAware {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

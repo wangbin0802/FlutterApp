@@ -21,6 +21,7 @@ class TestAPage extends StatelessWidget {
                 child: GestureDetector(
                   onTap: () {
                     Navigator.pushNamed(context, "/Bpage");
+                    Navigator.of(context).pop(false);
                   },
                   child: RichText(
                     textAlign: TextAlign.center,
