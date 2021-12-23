@@ -41,10 +41,24 @@ class _CircleProgressPageState extends State<CircleProgressPage> with RouteAware
                 count: 3,
                 color: Color(0xFF0080ff),
               ),
+            ),
+            Container(
+              child: StreamBuilder<int>(
+                stream: counter(),
+                builder: (context, snapshot) {
+                  return Text('change ${snapshot.data}');
+                }
+              ),
             )
           ],
         ),
       ),
     );
+  }
+
+  Stream<int> counter() {
+    return Stream.periodic(Duration(seconds: 1), (i) {
+      return i;
+    });
   }
 }
