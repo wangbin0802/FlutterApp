@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 class TextOverflowDemo extends StatelessWidget {
-  const TextOverflowDemo({Key key}) : super(key: key);
+  const TextOverflowDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

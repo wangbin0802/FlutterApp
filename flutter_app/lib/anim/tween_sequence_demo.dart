@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
 class TweenSequenceDemo extends StatefulWidget {
-  const TweenSequenceDemo({Key key}) : super(key: key);
+  const TweenSequenceDemo({Key? key}) : super(key: key);
 
   @override
   _TweenSequenceDemoState createState() => _TweenSequenceDemoState();
 }
 
 class _TweenSequenceDemoState extends State<TweenSequenceDemo> with SingleTickerProviderStateMixin {
-  AnimationController _animationController;
-  Animation _colorAnimation;
-  Animation _sizeAnimation;
+  late AnimationController _animationController;
+  late Animation _colorAnimation;
+  late Animation _sizeAnimation;
 
   @override
   void initState() {

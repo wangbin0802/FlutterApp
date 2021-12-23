@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TestCPage extends StatelessWidget {
-  TestCPage({Key key}) : super(key: key);
+  TestCPage({Key? key}) : super(key: key);
 
   var _scrollController = ScrollController();
 

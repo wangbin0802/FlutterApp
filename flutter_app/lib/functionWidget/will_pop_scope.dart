@@ -8,7 +8,7 @@ class WillPopScopeTestRoute extends StatefulWidget {
 }
 
 class _WillPopScopeTestRouteState extends State<WillPopScopeTestRoute> {
-  DateTime _lastPressedAt;
+  late DateTime _lastPressedAt;
   @override
   Widget build(BuildContext context) {
     return WillPopScope(

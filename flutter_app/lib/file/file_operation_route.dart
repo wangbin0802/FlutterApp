@@ -6,15 +6,15 @@ import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 
 class FileOperationRoute extends StatefulWidget {
-  const FileOperationRoute({Key key}) : super(key: key);
+  const FileOperationRoute({Key? key}) : super(key: key);
 
   @override
   _FileOperationRouteState createState() => _FileOperationRouteState();
 }
 
 class _FileOperationRouteState extends State<FileOperationRoute> {
-  int _counter;
-  double _dCheck;
+  int _counter = 0;
+  double _dCheck = 0.0;
 
   @override
   void initState() {

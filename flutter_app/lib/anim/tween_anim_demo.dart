@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class TweenAnimDemo extends StatefulWidget {
-  const TweenAnimDemo({Key key}) : super(key: key);
+  const TweenAnimDemo({Key? key}) : super(key: key);
 
   @override
   _TweenAnimDemoState createState() => _TweenAnimDemoState();
@@ -11,8 +11,8 @@ class TweenAnimDemo extends StatefulWidget {
 class _TweenAnimDemoState extends State<TweenAnimDemo>
     with SingleTickerProviderStateMixin {
 
-  AnimationController _controller;
-  Animation<Color> _animation;
+  late AnimationController _controller;
+  late Animation<Color?> _animation;
 
   @override
   void initState() {

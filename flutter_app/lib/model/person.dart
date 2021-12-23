@@ -3,8 +3,8 @@
 
 class Person {
   Person({
-      String name, 
-      int age,}){
+      String? name,
+      int? age,}){
     _name = name;
     _age = age;
 }
@@ -13,11 +13,11 @@ class Person {
     _name = json['name'];
     _age = json['age'];
   }
-  String _name;
-  int _age;
+  String? _name;
+  int? _age;
 
-  String get name => _name;
-  int get age => _age;
+  String? get name => _name;
+  int? get age => _age;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};

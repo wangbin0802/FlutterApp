@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class DragDemo extends StatefulWidget {
-  const DragDemo({Key key}) : super(key: key);
+  const DragDemo({Key? key}) : super(key: key);
 
   @override
   _DragDemoState createState() => _DragDemoState();

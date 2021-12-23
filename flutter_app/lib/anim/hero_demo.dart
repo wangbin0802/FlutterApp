@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'hero_1.dart';
 
 class HeroDemo extends StatefulWidget {
-  const HeroDemo({Key key}) : super(key: key);
+  const HeroDemo({Key? key}) : super(key: key);
 
   @override
   _HeroDemoState createState() => _HeroDemoState();

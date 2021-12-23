@@ -31,7 +31,7 @@ class CartModel extends ChangeNotifier {
 }
 
 class ProviderRoute extends StatefulWidget {
-  const ProviderRoute({Key key}) : super(key: key);
+  const ProviderRoute({Key? key}) : super(key: key);
 
   @override
   _ProviderRouteState createState() => _ProviderRouteState();

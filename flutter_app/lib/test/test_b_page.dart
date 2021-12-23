@@ -47,7 +47,7 @@ class _TestBPageState extends State<TestBPage> {
                 activeColor: Colors.blue,
                 onChanged: (value) {
                   setState(() {
-                    _checkBox = value;
+                    _checkBox = value!;
                   });
                 },
               ),

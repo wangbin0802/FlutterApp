@@ -8,7 +8,7 @@ class Spinner extends StatefulWidget {
 }
 
 class _SpinnerState extends State<Spinner> with SingleTickerProviderStateMixin {
-  AnimationController _controller;
+  late AnimationController _controller;
 
   @override
   void initState() {

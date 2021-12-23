@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class TipRout extends StatelessWidget {
-  const TipRout({Key key}) : super(key: key);
+  const TipRout({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

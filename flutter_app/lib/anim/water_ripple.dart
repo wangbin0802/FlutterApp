@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/anim/water_ripple_view.dart';
 
 class WaterRipple extends StatefulWidget {
-  final int count;
-  final Color color;
+  final int? count;
+  final Color? color;
 
-  const WaterRipple({Key key, this.count, this.color}) : super(key: key);
+  const WaterRipple({Key? key, this.count, this.color}) : super(key: key);
 
   @override
   _WaterRippleState createState() => _WaterRippleState();
 }
 
 class _WaterRippleState extends State<WaterRipple> with TickerProviderStateMixin {
-  AnimationController _controller;
+ late  AnimationController _controller;
 
   @override
   void initState() {
@@ -35,7 +35,7 @@ class _WaterRippleState extends State<WaterRipple> with TickerProviderStateMixin
     return AnimatedBuilder(
         animation: _controller,
         builder: (context, child) => CustomPaint(
-              painter: WaterRipplePainter(_controller.value, widget.count, widget.color),
+              painter: WaterRipplePainter(_controller.value, widget.count!, widget.color!),
             ));
   }
 }

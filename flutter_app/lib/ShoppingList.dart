@@ -8,7 +8,7 @@ class Product {
 class ShoppingListPage extends StatefulWidget {
 
   final List<Product> products;
-  ShoppingListPage({Key key, this.products}) : super(key: key);
+  ShoppingListPage({required Key key, required this.products}) : super(key: key);
 
   @override
   ShoppingListState createState() {
@@ -53,7 +53,7 @@ class ShoppingListState extends State<ShoppingListPage> {
 typedef void CartChangedCallback(Product product, bool inCart);
 
 class ShoppingListItem extends StatelessWidget {
-  ShoppingListItem({Product product, this.inCart, this.onCartChanged})
+  ShoppingListItem({required Product product, required this.inCart, required this.onCartChanged})
       : product = product,
         super(key: ObjectKey(product));
 
@@ -69,7 +69,7 @@ class ShoppingListItem extends StatelessWidget {
     return inCart ? Colors.black54 : Theme.of(context).primaryColor;
   }
 
-  TextStyle _getTextStyle(BuildContext context) {
+  TextStyle? _getTextStyle(BuildContext context) {
     if (!inCart) return null;
 
     return TextStyle(

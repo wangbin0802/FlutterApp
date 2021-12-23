@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 class TabBarPage extends StatefulWidget {
-  const TabBarPage({Key key}) : super(key: key);
+  const TabBarPage({Key? key}) : super(key: key);
 
   @override
   _TabBarPageState createState() => _TabBarPageState();
@@ -174,7 +174,7 @@ class _TabBarPageState extends State<TabBarPage> with TickerProviderStateMixin {
 class StickyTabBarDelegate extends SliverPersistentHeaderDelegate {
   final TabBar child;
 
-  StickyTabBarDelegate({@required this.child});
+  StickyTabBarDelegate({required this.child});
 
   @override
   Widget build(BuildContext context, double shrinkOffset, bool overlapsContent) {

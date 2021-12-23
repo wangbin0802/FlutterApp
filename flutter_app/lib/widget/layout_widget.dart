@@ -5,10 +5,10 @@ import 'package:flutter_app/state/observers.dart';
 class ShareDataWidget extends InheritedWidget {
   int data;
 
-  ShareDataWidget({key, this.data, Widget child})
+  ShareDataWidget({key, required this.data, required Widget child})
       : super(key: key, child: child);
 
-  static ShareDataWidget of(BuildContext context) {
+  static ShareDataWidget? of(BuildContext context) {
     return context.dependOnInheritedWidgetOfExactType<ShareDataWidget>();
   }
 
@@ -28,7 +28,7 @@ class _TestWidget extends StatefulWidget {
 class _TestWidgetState extends State<_TestWidget> {
   @override
   Widget build(BuildContext context) {
-    return Text(ShareDataWidget.of(context).data.toString());
+    return Text(ShareDataWidget.of(context)?.data.toString() ?? '');
   }
 
   @override
@@ -39,7 +39,7 @@ class _TestWidgetState extends State<_TestWidget> {
 }
 
 class InheritedWidgetTestRoute extends StatefulWidget {
-  const InheritedWidgetTestRoute({Key key}) : super(key: key);
+  const InheritedWidgetTestRoute({Key? key}) : super(key: key);
 
   @override
   _InheritedWidgetTestRouteState createState() =>
@@ -51,7 +51,7 @@ class _InheritedWidgetTestRouteState extends State<InheritedWidgetTestRoute> wit
 
   @override
   void initState() {
-    WidgetsBinding.instance.addObserver(this);
+    WidgetsBinding.instance?.addObserver(this);
     super.initState();
   }
 
@@ -59,7 +59,7 @@ class _InheritedWidgetTestRouteState extends State<InheritedWidgetTestRoute> wit
   void dispose() {
     super.dispose();
     print("[wb] dispose.....");
-    WidgetsBinding.instance.removeObserver(this);
+    WidgetsBinding.instance?.removeObserver(this);
   }
 
   @override

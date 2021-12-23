@@ -4,7 +4,7 @@ import 'package:flutter_app/anim/water_ripple.dart';
 import 'circle_progress_view.dart';
 
 class CircleProgressPage extends StatefulWidget {
-  const CircleProgressPage({Key key}) : super(key: key);
+  const CircleProgressPage({Key? key}) : super(key: key);
 
   @override
   _CircleProgressPageState createState() => _CircleProgressPageState();
@@ -28,9 +28,9 @@ class _CircleProgressPageState extends State<CircleProgressPage> with RouteAware
                   tween: Tween(begin: 0.0, end: 1.0),
                   duration: Duration(seconds: 3),
                   builder: (context, value, child) => CustomPaint(
-                    painter: CircleProgressPainter(value),
+                    painter: CircleProgressPainter(double.parse(value.toString())),
                     child: Center(
-                      child: Text("${(value * 100).floor()}%"),
+                      child: Text("${(double.parse(value.toString()) * 100).floor()}%"),
                     ),
                   ),
                 )),

@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedWidgetTest extends StatefulWidget {
-  const AnimatedWidgetTest({Key key}) : super(key: key);
+  const AnimatedWidgetTest({Key? key}) : super(key: key);
 
   @override
   _AnimatedWidgetTestState createState() => _AnimatedWidgetTestState();

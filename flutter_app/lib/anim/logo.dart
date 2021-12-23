@@ -7,8 +7,8 @@ class LogoAppState extends StatefulWidget {
 
 class _LogoAppStateState extends State<LogoAppState>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
-  Animation<double> _animation;
+  late AnimationController _controller;
+  late Animation<double> _animation;
 
   @override
   void initState() {
@@ -45,7 +45,7 @@ class _LogoAppStateState extends State<LogoAppState>
 }
 
 class AnimatedLogo extends AnimatedWidget {
-  AnimatedLogo({Key key, Animation<double> animation})
+  AnimatedLogo({Key? key, required Animation<double> animation})
       : super(key: key, listenable: animation);
 
   @override

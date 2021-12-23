@@ -5,7 +5,7 @@ class ChatMessage extends StatelessWidget {
   final String text;
   final AnimationController animationController;
 
-  const ChatMessage({this.text, this.animationController});
+  const ChatMessage({required this.text, required this.animationController});
   static const String _name = "Wang Bin";
 
   @override

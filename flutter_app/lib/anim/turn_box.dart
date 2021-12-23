@@ -1,18 +1,18 @@
 import 'package:flutter/cupertino.dart';
 
 class TurnBox extends StatefulWidget {
-  const TurnBox({Key key, this.turns = .0, this.speed = 200, this.child})
+  const TurnBox({Key? key, this.turns = .0, this.speed = 200, this.child})
       : super(key: key);
   final double turns;
   final int speed;
-  final Widget child;
+  final Widget? child;
 
   @override
   _TurnBoxState createState() => _TurnBoxState();
 }
 
 class _TurnBoxState extends State<TurnBox> with SingleTickerProviderStateMixin {
-  AnimationController _controller;
+  late AnimationController _controller;
 
   @override
   void initState() {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CurveTweenDemo extends StatefulWidget {
-  const CurveTweenDemo({Key key}) : super(key: key);
+  const CurveTweenDemo({Key? key}) : super(key: key);
 
   @override
   _CurveTweenDemoState createState() => _CurveTweenDemoState();
@@ -9,8 +9,8 @@ class CurveTweenDemo extends StatefulWidget {
 
 class _CurveTweenDemoState extends State<CurveTweenDemo> with SingleTickerProviderStateMixin {
 
-  AnimationController _controller;
-  Animation _animation;
+  AnimationController? _controller;
+  Animation? _animation;
 
   @override
   void initState() {
@@ -26,7 +26,7 @@ class _CurveTweenDemoState extends State<CurveTweenDemo> with SingleTickerProvid
       begin: 100.0,
       end: 200.0,
     ).chain(CurveTween(curve: Curves.linear))
-    .animate(_controller);
+    .animate(_controller!);
 
     // _animation = _controller.drive(CurveTween(curve: Curves.linear)).drive(Tween(
     //   begin: 100.0,
@@ -38,10 +38,10 @@ class _CurveTweenDemoState extends State<CurveTweenDemo> with SingleTickerProvid
   Widget build(BuildContext context) {
     return Center(
       child: GestureDetector(
-        onTap: () => _controller.forward(),
+        onTap: () => _controller?.forward(),
         child: Container(
-          height: _animation.value,
-          width: _animation.value,
+          height: _animation?.value,
+          width: _animation?.value,
           color: Colors.blue,
           alignment: Alignment.center,
           child: Text(
@@ -56,6 +56,6 @@ class _CurveTweenDemoState extends State<CurveTweenDemo> with SingleTickerProvid
   @override
   void dispose() {
     super.dispose();
-    _controller.dispose();
+    _controller?.dispose();
   }
 }

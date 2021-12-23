@@ -22,9 +22,9 @@ class AnimatedContainerDemo extends StatefulWidget {
 }
 
 class _AnimatedContainerDemoState extends State<AnimatedContainerDemo> {
-  Color color;
-  double radius;
-  double margin;
+  late Color color;
+  late double radius;
+  late double margin;
 
   @override
   void initState() {

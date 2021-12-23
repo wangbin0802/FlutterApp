@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AnimationBaseDemo extends StatefulWidget {
-  const AnimationBaseDemo({Key key}) : super(key: key);
+  const AnimationBaseDemo({Key? key}) : super(key: key);
 
   @override
   _AnimationBaseDemoState createState() => _AnimationBaseDemoState();
@@ -9,7 +9,7 @@ class AnimationBaseDemo extends StatefulWidget {
 
 class _AnimationBaseDemoState extends State<AnimationBaseDemo> with SingleTickerProviderStateMixin {
   double _size = 10;
-  AnimationController _animationController;
+  late AnimationController _animationController;
 
   @override
   void initState() {

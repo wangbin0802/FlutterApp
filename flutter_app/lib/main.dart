@@ -84,7 +84,7 @@ void main() {
 class SampleAppPage extends StatefulWidget {
   int initValue = 0;
 
-  SampleAppPage(this.initValue, {Key key}) : super(key: key);
+  SampleAppPage(this.initValue, {Key? key}) : super(key: key);
 
   @override
   _SampleAppPageState createState() => _SampleAppPageState();
@@ -143,7 +143,7 @@ class _SampleAppPageState extends State<SampleAppPage> {
         ));
   }
 
-  Future<void> _refresh() {}
+  Future<void> _refresh() async {}
 
   Widget getRow(int i) {
     return GestureDetector(
@@ -312,7 +312,7 @@ ListTile _tile(String title, String subTitle, IconData iconData) {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect

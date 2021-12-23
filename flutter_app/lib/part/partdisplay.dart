@@ -11,7 +11,7 @@ class PartDisplay extends StatelessWidget {
         child: Navigator(
           initialRoute: '/',
           onGenerateRoute: (RouteSettings settings) {
-            WidgetBuilder builder;
+            WidgetBuilder builder = (context) => PageC();
             switch (settings.name) {
               case '/':
                 builder = (context) => PageC();
@@ -51,7 +51,7 @@ class PageC extends StatelessWidget {
   }
 
   _buildItem(IconData iconData, String title, String content,
-      {bool showArrow = false, Function onPress}) {
+      {bool showArrow = false, Function()? onPress}) {
     return Row(
       children: <Widget>[
         Icon(iconData),

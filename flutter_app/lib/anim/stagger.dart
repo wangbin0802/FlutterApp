@@ -8,7 +8,7 @@ class StaggerDemo extends StatefulWidget {
 
 class _StaggerDemoState extends State<StaggerDemo>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
+  late AnimationController _controller;
 
   @override
   void initState() {
@@ -56,8 +56,8 @@ class _StaggerDemoState extends State<StaggerDemo>
 
 class StaggerAnimation extends StatelessWidget {
   StaggerAnimation({
-    Key key,
-    this.controller,
+    Key? key,
+    required this.controller,
     this.width,
     this.height,
     this.padding,
@@ -79,29 +79,29 @@ class StaggerAnimation extends StatelessWidget {
         super(key: key);
 
   final Animation<double> controller;
-  final Animation<double> opacity;
-  final Animation<double> width;
-  final Animation<double> height;
-  final Animation<EdgeInsets> padding;
-  final Animation<BorderRadius> borderRadius;
-  final Animation<Color> color;
+  final Animation<double>? opacity;
+  final Animation<double>? width;
+  final Animation<double>? height;
+  final Animation<EdgeInsets>? padding;
+  final Animation<BorderRadius>? borderRadius;
+  final Animation<Color>? color;
 
   // This function is called each time the controller "ticks" a new frame.
   // When it runs, all of the animation's values will have been
   // updated to reflect the controller's current value.
-  Widget _buildAnimation(BuildContext context, Widget child) {
+  Widget _buildAnimation(BuildContext context, Widget? child) {
     return Container(
 //      padding: padding.value,
       alignment: Alignment.bottomCenter,
       child: Opacity(
-        opacity: opacity.value,
+        opacity: opacity?.value ?? 0,
         child: Container(
 //          width: width.value,
 //          height: height.value,
           decoration: BoxDecoration(
 //            color: color.value,
             border: Border.all(
-              color: Colors.indigo[300],
+              color: Colors.indigo[300]!,
               width: 3.0,
             ),
 //            borderRadius: borderRadius.value,

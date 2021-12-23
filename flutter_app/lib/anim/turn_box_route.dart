@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/anim/turn_box.dart';
 
 class TurnBoxRoute extends StatefulWidget {
-  const TurnBoxRoute({Key key}) : super(key: key);
+  const TurnBoxRoute({Key? key}) : super(key: key);
 
   @override
   _TurnBoxRouteState createState() => _TurnBoxRouteState();

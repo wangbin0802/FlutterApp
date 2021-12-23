@@ -59,9 +59,9 @@ Widget buttons = Container(
   child: Row(
     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
     children: <Widget>[
-      buildButtonColum(Colors.blue[300], Icons.call, 'CALL'),
-      buildButtonColum(Colors.blue[300], Icons.near_me, 'ROUTE'),
-      buildButtonColum(Colors.blue[300], Icons.share, 'SHARE'),
+      buildButtonColum(Colors.blue[300]!, Icons.call, 'CALL'),
+      buildButtonColum(Colors.blue[300]!, Icons.near_me, 'ROUTE'),
+      buildButtonColum(Colors.blue[300]!, Icons.share, 'SHARE'),
     ],
   ),
 );

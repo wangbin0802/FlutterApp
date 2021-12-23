@@ -7,12 +7,12 @@ class DialogDemo extends StatelessWidget {
       child: IconButton(
           icon: Icon(Icons.repeat),
           onPressed: () {
-            return _neverSatisfied(context);
+            _neverSatisfied(context);
           }),
     );
   }
 
-  Future<void> _neverSatisfied(BuildContext context) async {
+  Future<dynamic> _neverSatisfied(BuildContext context) async {
     return showDialog(
         context: context,
         barrierDismissible: true,
