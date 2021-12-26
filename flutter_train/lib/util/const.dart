@@ -17,7 +17,7 @@ class Constants {
     scaffoldBackgroundColor: lightBG,
     appBarTheme: AppBarTheme(
       titleTextStyle: TextStyle(
-        color: darkBG,
+        color: lightBG,
         fontSize: 18.0,
         fontWeight: FontWeight.w800,
       ),

@@ -23,6 +23,7 @@ class _TrendingPageState extends State<TrendingPage> {
         padding: const EdgeInsets.symmetric(horizontal: 10.0),
         child: ListView(
           children: [
+            const SizedBox(height: 10.0),
             SearchCard(),
             const SizedBox(height: 10.0),
             ListView.builder(
