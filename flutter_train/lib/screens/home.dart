@@ -123,7 +123,7 @@ class Home extends StatelessWidget {
             child: Text(
               'See all(9)',
               style: TextStyle(
-                color: Theme.of(context).accentColor,
+                color: Theme.of(context).colorScheme.secondary,
               ),
             )),
       ],

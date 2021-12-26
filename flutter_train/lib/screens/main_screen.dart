@@ -86,7 +86,7 @@ class _MainScreenState extends State<MainScreen> {
           size: 24,
         ),
         color: _page == index
-            ? Theme.of(context).accentColor
+            ? Theme.of(context).colorScheme.secondary
             : Theme.of(context).textTheme.caption!.color,
       );
     }

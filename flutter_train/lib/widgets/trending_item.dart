@@ -14,7 +14,7 @@ class _TrendingItemState extends State<TrendingItem> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
-      child: Container(
+      child: SizedBox(
         height: MediaQuery.of(context).size.height / 2.5,
         width: MediaQuery.of(context).size.width,
         child: Card(
@@ -102,12 +102,15 @@ class _TrendingItemState extends State<TrendingItem> {
               ),
               const SizedBox(height: 7.0),
               Padding(
-                padding: EdgeInsets.only(left: 15.0),
-                child: Container(
+                padding: const EdgeInsets.only(left: 15.0),
+                child: SizedBox(
                   width: MediaQuery.of(context).size.width,
                   child: Text(
                     widget.item['address'],
-                    style: TextStyle(fontWeight: FontWeight.w300, fontSize: 12),
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w300,
+                      fontSize: 12,
+                    ),
                     textAlign: TextAlign.left,
                   ),
                 ),

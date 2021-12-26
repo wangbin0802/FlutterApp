@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_train/util/const.dart';
 
 class CategoryItem extends StatefulWidget {
   const CategoryItem({Key? key, required this.cate}) : super(key: key);
