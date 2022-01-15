@@ -44,12 +44,38 @@ class _CircleProgressPageState extends State<CircleProgressPage> with RouteAware
             ),
             Container(
               child: StreamBuilder<int>(
-                stream: counter(),
-                builder: (context, snapshot) {
-                  return Text('change ${snapshot.data}');
-                }
+                  stream: counter(),
+                  builder: (context, snapshot) {
+                    return Text('change ${snapshot.data}');
+                  }),
+            ),
+            Container(
+              margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Offstage(
+                      offstage: false,
+                      child: Text(
+                        'Color red part',
+                        style: TextStyle(color: Colors.red, fontSize: 13),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    constraints: BoxConstraints(
+                      maxWidth: 150
+                    ),
+                    child: Text(
+                      "right side ddde33555 5533355566777744667777",
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
+                    ),
+                  )
+                ],
               ),
-            )
+            ),
+
           ],
         ),
       ),
@@ -57,8 +83,6 @@ class _CircleProgressPageState extends State<CircleProgressPage> with RouteAware
   }
 
   Stream<int> counter() {
-    return Stream.periodic(Duration(seconds: 1), (i) {
-      return i;
-    });
+    return Stream.value(5);
   }
 }
