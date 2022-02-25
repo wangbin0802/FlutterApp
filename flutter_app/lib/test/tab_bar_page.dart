@@ -36,19 +36,20 @@ class _TabBarPageState extends State<TabBarPage> with TickerProviderStateMixin {
         SliverPersistentHeader(
           pinned: true,
           delegate: StickyTabBarDelegate(
-              child: TabBar(
-            labelColor: Colors.black,
-            controller: _tabController,
-            tabs: [
-              Tab(
-                text: "资讯",
-              ),
-              Tab(
-                text: "技术",
-              )
-            ],
-          )),
-        )
+            child: TabBar(
+              labelColor: Colors.black,
+              controller: _tabController,
+              tabs: [
+                Tab(
+                  text: "资讯",
+                ),
+                Tab(
+                  text: "技术",
+                )
+              ],
+            ),
+          ),
+        ),
       ],
       body: TabBarView(
         controller: _tabController,
@@ -147,15 +148,14 @@ class _TabBarPageState extends State<TabBarPage> with TickerProviderStateMixin {
               child: Image.asset("images/WechatIMG14.jpeg"),
             ),
           ),
-          IconButton(onPressed: () => ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-                content: Text("Welcom to back."),
-                action: SnackBarAction(
-                  label: "确定",
-                  onPressed: () => print(""),
-                ),
-            )
-          ),
+          IconButton(
+              onPressed: () => ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    content: Text("Welcom to back."),
+                    action: SnackBarAction(
+                      label: "确定",
+                      onPressed: () => print(""),
+                    ),
+                  )),
               icon: Icon(Icons.eighteen_mp))
         ],
       );

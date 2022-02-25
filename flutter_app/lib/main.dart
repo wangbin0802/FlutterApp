@@ -20,6 +20,7 @@ import 'package:flutter_app/widget/openbrowser.dart';
 import 'package:flutter_app/widget/progress_route.dart';
 import 'package:flutter_app/widget/spinner.dart';
 import 'package:flutter_app/widget/stack.dart';
+import 'package:flutter_app/youtube/badge_widget.dart';
 
 import 'ShoppingList.dart';
 import 'anim/animation_base_demo.dart';
@@ -56,21 +57,17 @@ void main() {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         child: Text("Book"),
-        onPressed: () {
-
-        },
+        onPressed: () {},
       ),
       bottomNavigationBar: BottomNavigationBar(
-        onTap: (index) {
-
-        },
+        onTap: (index) {},
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.perm_identity), label: "Me")
         ],
       ),
       backgroundColor: Colors.white,
-      body: CircleProgressPage(),
+      body: BadgeWidget(),
     ),
     initialRoute: "/",
     routes: {
@@ -227,7 +224,7 @@ class MyApp extends StatelessWidget {
 //              floatActionButton
 //            ],
 //          )),
-//      home: FirstRoute(),
+      home: FirstRoute(),
       initialRoute: '/',
       routes: {
         '/': (context) => FirstRoute(),

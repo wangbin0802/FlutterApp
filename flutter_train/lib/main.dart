@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_train/screens/main_screen.dart';
 import 'package:flutter_train/util/const.dart';
 
+import 'demo/layoutbuilder_demo.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: Constants.appName,
       theme: Constants.lightTheme,
       darkTheme: Constants.darkTheme,
-      home: const MainScreen(),
+      home: const LayoutBuilderDemo(),
     );
   }
 }
