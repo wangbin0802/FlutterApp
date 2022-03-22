@@ -36,6 +36,7 @@ import 'functionWidget/will_pop_scope.dart';
 import 'layout.dart';
 import 'part/partdisplay.dart';
 import 'widget/chat_screen.dart';
+import 'youtube/animation_stagger.dart';
 
 void main() {
   const String _name = "Wang Bin";
@@ -67,7 +68,7 @@ void main() {
         ],
       ),
       backgroundColor: Colors.white,
-      body: BadgeWidget(),
+      body: AnimationStaggerDemo(),
     ),
     initialRoute: "/",
     routes: {
